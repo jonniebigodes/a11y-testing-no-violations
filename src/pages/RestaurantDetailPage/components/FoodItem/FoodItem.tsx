@@ -67,7 +67,7 @@ export const FoodItem = memo(
             {quantity}
           </Quantity>
         )}
-        <Heading level={4}>{name}</Heading>
+        <Heading level={3}>{name}</Heading>
         <Description>{description}</Description>
         <Price>{toEuro(price)}</Price>
       </div>

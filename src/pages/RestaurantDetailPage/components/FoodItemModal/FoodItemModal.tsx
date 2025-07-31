@@ -35,7 +35,7 @@ const ButtonsContainer = styled.div`
 const TopContainer = styled.div(
   ({ theme: { color } }) => css`
     padding: 2.5rem 1.5rem;
-    background: ${color.overlayHeader};
+    background: ${color.white};
     border-radius: 16px 16px 0px 0px;
   `
 )
@@ -89,7 +89,7 @@ export const FoodItemModal = ({
       {item && (
         <div>
           <TopContainer>
-            <Heading>{item.name}</Heading>
+            <Heading level={3}>{item.name}</Heading>
             <StyledBody>{item.description}</StyledBody>
           </TopContainer>
           <BottomContainer>
