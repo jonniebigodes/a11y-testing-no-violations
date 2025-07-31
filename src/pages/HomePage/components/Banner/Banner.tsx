@@ -49,8 +49,9 @@ const StyledHeading = styled(Heading)(
   ({ theme: { color } }) => `
   margin-bottom: 2.5rem;
   padding: 0 2rem;
+  color: #2D2D2D;
   strong {
-    color: ${color.primaryText};
+    color: #2D2D2D;
     font-weight: 900;
   }
 `
@@ -59,7 +60,7 @@ const StyledHeading = styled(Heading)(
 export const Banner = () => (
   <Container>
     <ContentContainer>
-      <StyledHeading level={2}>
+      <StyledHeading level={1}>
         <strong>Hungry?</strong> find your next meal
       </StyledHeading>
       <Link to="/categories">
