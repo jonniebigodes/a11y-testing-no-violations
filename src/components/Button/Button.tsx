@@ -14,7 +14,7 @@ const StyledButton = styled.button<{
   withIcon: boolean
   round: boolean
 }>(
-  ({ clear, large, round, withIcon, theme: { color, borderRadius } }) => css`
+  ({ clear, large, round, withIcon, theme: { color, boxShadow, borderRadius } }) => css`
     outline: none;
     border: 0;
     font-family: 'Hind';
@@ -35,7 +35,7 @@ const StyledButton = styled.button<{
     }
 
     &:focus {
-      outline: 6px solid pink;
+      box-shadow: ${boxShadow.outerBorder};
     }
 
     &:disabled {
@@ -105,7 +105,6 @@ export const Button: React.FC<React.PropsWithChildren<ButtonProps>> = ({
       round={round}
       {...props}
       withIcon={!!icon}
-      role="banner"
     >
       {icon && (
         <Icon color={clear ? color.primaryText : color.buttonText} size={iconSize} name={icon} />
