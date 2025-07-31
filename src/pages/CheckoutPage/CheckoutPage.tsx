@@ -64,7 +64,7 @@ export const CheckoutPage = () => {
     <PageTemplate type="basic">
       <ContentContainer>
         <TopContainer>
-          <StyledHeading level={2} className="container">
+          <StyledHeading level={1} className="container">
             Checkout
           </StyledHeading>
         </TopContainer>

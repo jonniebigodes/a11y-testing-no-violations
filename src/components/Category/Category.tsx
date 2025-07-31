@@ -31,6 +31,11 @@ const Container = styled.figure<{ round: boolean }>(
       opacity: 0.9;
     }
 
+    &:focus {
+      outline: 2px solid ${color.buttonPrimary};
+      outline-offset: 2px;
+    }
+
     @media ${breakpoints.M} {
       padding: ${round ? '1.5rem 0' : '0'};
     }
@@ -108,7 +113,13 @@ const Squared = ({ title, photoUrl: url }: CategoryProps) => (
 
 export const Category = ({ photoUrl, title, round = false }: CategoryProps) => {
   return (
-    <Container round={round} data-testid={title}>
+    <Container
+      round={round}
+      data-testid={title}
+      tabIndex={0}
+      role="button"
+      aria-label={`View ${title} category`}
+    >
       {round ? (
         <Rounded photoUrl={photoUrl} title={title} />
       ) : (

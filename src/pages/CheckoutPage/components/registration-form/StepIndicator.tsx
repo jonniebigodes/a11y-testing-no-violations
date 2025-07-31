@@ -57,7 +57,7 @@ export const StepIndicator = ({ title, currentStep, amountOfSteps }: StepIndicat
   return (
     <div style={{ marginBottom: '2rem' }}>
       <TitleSection>
-        <Heading level={4}>{title}</Heading>
+        <Heading level={2}>{title}</Heading>
         <Body size="XS" type="span">
           Step {currentStep} of {amountOfSteps}
         </Body>

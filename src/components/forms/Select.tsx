@@ -71,6 +71,7 @@ export const Select = ({
       value={value}
       onChange={(evt: any) => onChange && onChange(Number(evt.target.value))}
       {...otherProps}
+      aria-label="Quantities and prices select"
     >
       {options.map((option) => (
         <option key={option} value={option}>
@@ -78,6 +79,10 @@ export const Select = ({
         </option>
       ))}
     </select>
-    {label && <Body type="label">{label}</Body>}
+    {label && (
+      <Body type="label" htmlFor={id}>
+        {label}
+      </Body>
+    )}
   </Container>
 )

@@ -111,7 +111,7 @@ export const RestaurantDetailPage: VFC = () => {
       <TopBanner photoUrl={photoUrl} onBackClick={() => navigate(-1)} />
       <DetailSection>
         <div className="container">
-          <Heading level={2}>{name}</Heading>
+          <Heading level={1}>{name}</Heading>
           <Body>Specialties: {specialty}</Body>
           <Review rating={rating} />
           <div>{categories?.map((category) => <StyledBadge key={category} text={category} />)}</div>

@@ -15,7 +15,7 @@ const Breadcrumb = styled.div`
   margin-bottom: 2rem;
   a,
   p {
-    color: #7b7b7b;
+    color: #4a4a4a;
     text-transform: lowercase;
   }
 `

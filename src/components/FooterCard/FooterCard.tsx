@@ -63,13 +63,7 @@ export const FooterCard: React.FC<React.PropsWithChildren<FooterCardProps>> = ({
           <li key={name}>
             <Body>
               {external ? (
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={href}
-                  role="directory"
-                  aria-hidden="true"
-                >
+                <a target="_blank" rel="noopener noreferrer" href={href}>
                   {name}
                 </a>
               ) : (

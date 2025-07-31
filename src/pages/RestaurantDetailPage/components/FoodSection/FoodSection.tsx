@@ -13,10 +13,6 @@ type FoodSectionProps = {
   cartItems: CartItem[]
   onItemClick?: (item: CartItem) => void
 }
-
-const StyledHeading = styled(Heading)`
-  margin-bottom: 1.5rem;
-`
 const StyledContainer = styled.div`
   grid-template-columns: repeat(1, 1fr);
   gap: 24px;
@@ -32,10 +28,16 @@ const StyledContainer = styled.div`
   }
 `
 
+const HeadingWithMargin = styled.div`
+  margin-bottom: 1.5rem;
+`
+
 export const FoodSection = memo(
   ({ title, cartItems, items, onItemClick = () => {} }: FoodSectionProps) => (
     <div>
-      <StyledHeading level={3}>{title}</StyledHeading>
+      <HeadingWithMargin>
+        <Heading level={2}>{title}</Heading>
+      </HeadingWithMargin>
       <StyledContainer>
         {items.map((item: FoodMenuItem) => {
           const cartItem = cartItems.find((c) => c.id === item.id)
