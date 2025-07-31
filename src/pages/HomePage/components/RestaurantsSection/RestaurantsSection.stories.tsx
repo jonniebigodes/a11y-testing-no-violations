@@ -9,6 +9,19 @@ import { RestaurantsSection } from './RestaurantsSection'
 const meta = {
   title: 'Pages/HomePage/Components/RestaurantsSection',
   component: RestaurantsSection,
+  parameters: {
+    a11y: {
+      config: {
+        rules: [
+          {
+            // The autocomplete rule will not run based on the CSS selector provided
+            id: 'autocomplete-valid',
+            selector: '*:not([autocomplete="nope"])',
+          },
+        ],
+      },
+    },
+  },
 } satisfies Meta<typeof RestaurantsSection>
 
 export default meta
